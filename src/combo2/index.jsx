@@ -82,6 +82,16 @@ const styles = StyleSheet.create({
 })
 
 export default class Combos extends React.Component {
+  resize = () => this.forceUpdate()
+
+  componentDidMount() {
+    window.addEventListener('resize', this.resize)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resize)
+  }
+
   render() {
     const combosComponents = combos.splice(0, combos.length - 2).map( (combo, i) => (
       <div className={css(styles.combo)} key={i} id={combo._id}>
