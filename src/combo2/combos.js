@@ -113,7 +113,7 @@ export const combos = [
   },
   {
     number: 17,
-    title: "Two Chiles Rellenos",
+    title: "Chiles Relleno",
     price: "$9.23",
     img: "two_chiles_rellenos_600x416.jpg",
     fontSize: 28

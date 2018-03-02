@@ -17,7 +17,7 @@ const promos = [
     img: 'Two_Beef_Enchiladas.jpg',
   },
   {
-    name: 'Two Chile Rellenos',
+    name: 'Chile Relleno',
     img: 'Two_Chile_Rellenos.jpg',
   },
 ]

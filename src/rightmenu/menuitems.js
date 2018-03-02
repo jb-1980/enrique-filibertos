@@ -113,14 +113,14 @@ export const menuitems = [
         description: '',
       },
       {
-        name: '*Fish',
+        name: 'Fish',
         price: '$6.37',
         description: 'Fish, pico de gallo, cabbage, tartar sauce',
       },
       {
         name: 'Chile Relleno',
         price: '$6.37',
-        description: 'Two chile rellenos, guacamole, pico de gallo',
+        description: 'Chile relleno, guacamole, pico de gallo',
       },
       {
         name: 'Pollo Asado',
@@ -128,7 +128,7 @@ export const menuitems = [
         description: 'Grilled chicken, guacamole, pico de gallo',
       },
       {
-        name: '*Camaron (Shrimp)',
+        name: 'Camaron (Shrimp)',
         price: '$8.03',
         description: '',
       },
@@ -240,9 +240,9 @@ export const menuitems = [
         description: 'Shredded beef, bell peppers, onions, tomatoes, cheese, lettuce & enchilada sauce',
       },
       {
-        name: 'Two Chile Rellenos',
+        name: 'Chile Relleno',
         price: '$6.75',
-        description: 'Two chile rellenos, guacamole, sour cream, lettuce & pico de gallo',
+        description: 'Chile relleno, guacamole, sour cream, lettuce & pico de gallo',
       },
     ]
   },
