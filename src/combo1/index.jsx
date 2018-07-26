@@ -5,8 +5,8 @@ import { StyleSheet, css } from "aphrodite"
 import { combos } from "./combos"
 import { autoSizeText, transitionPromo } from "../utils"
 
-const windowWidth = 1904
-const windowHeight = 1064
+const windowWidth = 1920
+const windowHeight = 1080
 const border = 3
 const containerWidth = windowWidth / 4 - 2 * border
 const containerHeight = windowHeight / 3 - 2 * border
