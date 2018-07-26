@@ -7,7 +7,6 @@ const resizeText = (el, fontFamily) => {
 }
 
 export const autoSizeText = (selector, fontFamily) => {
-  // retrieve all title elements
   const elements = Array.from(document.querySelectorAll(selector))
   console.log(elements)
   if (elements.length === 0) {
