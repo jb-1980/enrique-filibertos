@@ -31,7 +31,10 @@ var config = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
-    new CleanWebpackPlugin(pathsToClean),
+    new CleanWebpackPlugin(pathsToClean, {
+      watch: false,
+      exclude: ["index.html"],
+    }),
   ],
 }
 
@@ -95,9 +98,4 @@ var extrasConfig = Object.assign({}, config, {
   ],
 })
 
-module.exports = [
-  menuConfig,
-  combo1Config,
-  combo2Config,
-  extrasConfig,
-]
+module.exports = [menuConfig, combo1Config, combo2Config, extrasConfig]
