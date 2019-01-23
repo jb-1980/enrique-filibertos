@@ -1,6 +1,5 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { Textfit } from "react-textfit"
 import { StyleSheet, css } from "aphrodite"
 import { combos } from "./combos"
 import { autoSizeText, transitionPromo } from "../utils"
@@ -84,7 +83,7 @@ const styles = StyleSheet.create({
 export default class Combos extends React.Component {
   componentDidMount() {
     this.intervalId = setInterval(transitionPromo, 7777)
-    // setTimeout(() => autoSizeText(".title", "Special Elite"), 30)
+    setTimeout(() => autoSizeText(".title", "Special Elite"), 30)
   }
 
   componentWillUnmount() {

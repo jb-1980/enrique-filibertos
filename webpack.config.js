@@ -3,17 +3,19 @@ const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const CleanWebpackPlugin = require("clean-webpack-plugin")
 
-const pathsToClean = ["dist"]
+console.log(process.env.NODE_ENV)
+const outputPath = process.env.NODE_ENV === "production" ? "dist" : "staging"
+const pathsToClean = [outputPath]
 
 var config = {
   resolve: {
     extensions: [".js", ".jsx"],
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
-        loaders: ["babel-loader"],
+        loader: "babel-loader",
         exclude: /node_modules/,
         include: __dirname,
       },
@@ -41,7 +43,7 @@ var config = {
 var menuConfig = Object.assign({}, config, {
   entry: "./src/leftmenu/index",
   output: {
-    path: path.join(__dirname, "dist/leftmenu"),
+    path: path.join(__dirname, outputPath + "/leftmenu"),
     filename: "bundle.[chunkHash].js",
   },
   plugins: [
@@ -56,7 +58,7 @@ var menuConfig = Object.assign({}, config, {
 var combo1Config = Object.assign({}, config, {
   entry: "./src/combo1/index",
   output: {
-    path: path.join(__dirname, "dist/combo1"),
+    path: path.join(__dirname, outputPath + "/combo1"),
     filename: "bundle.[chunkHash].js",
   },
   plugins: [
@@ -71,7 +73,7 @@ var combo1Config = Object.assign({}, config, {
 var combo2Config = Object.assign({}, config, {
   entry: "./src/combo2/index",
   output: {
-    path: path.join(__dirname, "dist/combo2"),
+    path: path.join(__dirname, outputPath + "/combo2"),
     filename: "bundle.[chunkHash].js",
   },
   plugins: [
@@ -86,7 +88,7 @@ var combo2Config = Object.assign({}, config, {
 var extrasConfig = Object.assign({}, config, {
   entry: "./src/rightmenu/index",
   output: {
-    path: path.join(__dirname, "dist/rightmenu"),
+    path: path.join(__dirname, outputPath + "/rightmenu"),
     filename: "bundle.[chunkHash].js",
   },
   plugins: [
