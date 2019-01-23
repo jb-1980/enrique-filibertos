@@ -3,8 +3,8 @@ import ReactDOM from "react-dom"
 import { StyleSheet, css } from "aphrodite"
 import { combos } from "./combos"
 
-const windowWidth = 1920
-const windowHeight = 1080
+const windowWidth = window.innerWidth
+const windowHeight = window.innerHeight
 
 const containerWidth = windowWidth / 4
 const containerHeight = windowHeight / 3
@@ -14,27 +14,28 @@ const border = 3
 
 const styles = StyleSheet.create({
   combos: {
-    width: windowWidth,
-    height: windowHeight,
     display: "flex",
-    flexWrap: "wrap",
+    flexFlow: "row wrap",
+    justifyContent: "flex-start",
+    width: windowWidth,
   },
   combo: {
-    // maxWidth: containerWidth,
-    // height: containerHeight,
+    flex: 1,
+    maxWidth: containerWidth,
+    height: containerHeight,
     border: `${border}px solid #000`,
   },
   comboHeader: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
     maxWidth: containerWidth,
     minWidth: containerWidth,
-    width: containerWidth,
     height: headerHeight,
     backgroundColor: "#fff",
     color: "#000",
   },
   number: {
+    flex: 0,
     minWidth: headerHeight * 1.02,
     minHeight: headerHeight * 1.02,
     width: headerHeight * 1.02,
@@ -52,14 +53,14 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   title: {
+    flex: 1,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    maxWidth: 285,
-    maxHeight: 79,
   },
   price: {
+    flex: 0,
     backgroundColor: "#000",
     borderRadius: `${headerHeight}px 0 0 ${headerHeight}px`,
     color: "#fff",
@@ -68,7 +69,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     fontSize: 0.5 * headerHeight,
     transform: `translateY(${headerHeight / 30}px)`,
-    marginLeft: "auto",
   },
   fontTopPadding: {
     transform: `translateY(${0.1 * headerHeight}px)`,
